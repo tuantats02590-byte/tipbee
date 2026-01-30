@@ -23,6 +23,11 @@ body {
   align-items: center;
   background: #222;
   padding: 10px 20px;
+      position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .Main-nav img {
@@ -31,6 +36,7 @@ body {
 
 .content-nav {
   flex: 1;
+  ;
 }
 
 .ul-nav {
@@ -50,6 +56,19 @@ body {
 
 .li-nav a:hover {
   color: #ffd700;
+}
+.timkiem-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timkiem-box input {
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 0.9em;
 }
 
 
@@ -126,6 +145,13 @@ table tr:nth-child(even) {
   margin: 20px 0 10px;
   font-weight: bold;
 }
+.team-img{
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+}
 
 .hive.blue { color: #007bff; }
 .hive.red { color: #dc3545; }
@@ -138,6 +164,7 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 40px;
+  font-family:'Knewave';
 }
   .image-grid {
     display: grid;
@@ -167,7 +194,7 @@ footer {
   }
 
 h2 {
-  color: #333;
+  color: #e0d7d7;
 }
 
 .map-container {
@@ -191,9 +218,11 @@ h2 {
 .video-title {
 text-align: center; /* căn giữa */
 font-size: 24px;
-margin-bottom: 10px;
+margin-bottom: 7px;
 color: #0a6cec;
 font-weight: bold;
+background-color: #222;
+
 }
 .bluefarm {
 position: relative;
@@ -205,8 +234,98 @@ aspect-ratio: 16 / 9;
 
 .boost-t {
 position: absolute;
-width: 100%;
-height: 100%;
+width: 90%;
+height: 90%;
 border-radius: 12px;
 border: none;
 }
+.playwrite-nz-basic {
+  font-family: "Playwrite NZ Basic", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100%;
+  font-style: normal;
+}
+
+:root {
+  --total-items: 7; 
+  --animation-duration: 30s; 
+}
+ 
+
+.scorlling {
+  width: 100%;
+  max-width: 1536px;
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+ 
+
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+}
+ 
+img{
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes scrollleft {
+  to {
+    left: -200px; 
+  }
+}
+ 
+
+.item {
+  width: 250px;
+  height: 100%; 
+  background-color: #bababa; 
+  border-radius: 6px; 
+  position: absolute; 
+  overflow: hidden;
+ 
+
+  left: max(calc(250px * var(--total-items)), 100%);
+ 
+ 
+  animation-name: scrollleft; 
+  animation-duration: var(--animation-duration); 
+  animation-timing-function: linear; 
+  animation-iteration-count: infinite; 
+}
+ 
+
+.item1 {
+  animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 1) * -1);
+}
+.item2 {
+  animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 2) * -1);
+}
+.item3 {
+  animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 3) * -1);
+}
+.item4 {
+  animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 4) * -1);
+}
+.item5 {
+  animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 5) * -1);
+}
+.item6 {
+  animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 6) * -1);
+}
+.item7 {
+  animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 7) * -1);
+}
+
+.wiki-btn{
+  background: #ffd54f;
+  padding: 3px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
