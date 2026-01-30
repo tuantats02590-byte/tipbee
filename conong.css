@@ -21,7 +21,7 @@ body {
 .Main-nav {
   display: flex;
   align-items: center;
-  background: #222;
+  background: #1bdbe9;
   padding: 10px 20px;
       position: fixed;
     top: 0;
@@ -29,7 +29,50 @@ body {
     width: 100%;
     z-index: 1000;
 }
+.dropdown{
+  position: relative;
+}
 
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 0;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  border-radius: 8px;
+}
+
+.dropdown-menu li{
+  padding: 10px;
+}
+
+.dropdown-menu li a{
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu li:hover{
+  background: #f2f2f2;
+}
+
+/* hover để xổ */
+.dropdown:hover .dropdown-menu{
+  display: block;
+}
+
+/* cuộn mượt */
+html{
+  scroll-behavior: smooth;
+}
+
+/* nếu navbar fixed */
+.hive{
+  scroll-margin-top: 90px;
+}
 .Main-nav img {
   margin-right: 20px;
 }
